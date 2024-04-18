@@ -15,9 +15,13 @@ int main(){
     cout << "Digite uma palavra para armazenar no segundo array: ";
     cin >> palavra2;
 
-    if(palavra1.compare(palavra2) > 0 ){
+    int comparacao = strcmp(palavra1, palavra2);
+
+    if(comparacao > 0 ){
         cout << "Sua primeira palavra " << palavra1 << " é maior que sua segunda palavra " << palavra2 <<endl; 
-    }else if(palavra1.compare(palavra2) < 0){
+    } else if(comparacao < 0) {
         cout << "Sua palavra " << palavra2 << " é maior que sua palavra " << palavra1 <<endl;  
+    } else {
+        cout << "As palavras são iguais." << endl;
     }
 }
